@@ -1,0 +1,22 @@
+<?php 
+    ini_set('display_errors', 0);
+    error_reporting(E_ALL);
+
+    // These variables define the connection information for your MySQL database 
+    $username = "root"; 
+    $password = "qwerty123"; 
+    $host = "localhost"; 
+    $dbname = "movie_db"; 
+    
+    // Create connection
+    $conn = mysqli_connect($host, $username, $password, $dbname);
+
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    //echo "Connected successfully";
+
+    header('Content-Type: text/html; charset=utf-8'); 
+    session_start(); 
+?>
